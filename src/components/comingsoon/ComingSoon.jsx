@@ -1,15 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./comingsoon.css";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 const ComingSoon = () => {
-  return (
-    <Canvas>
-      <mesh>
-        <boxGeometry />
-      </mesh>
-    </Canvas>
-  );
+  return <div>Hi</div>;
 };
 
 export default ComingSoon;
