@@ -23,6 +23,15 @@ const Plane = ({ position, size, color }) => {
   );
 };
 
+const Ring = ({ position, size }) => {
+  return (
+    <mesh position={position}>
+      <torusGeometry args={size} />
+      <meshStandardMaterial color={"white"} />
+    </mesh>
+  );
+};
+
 const Text = ({ position, size }) => {
   return (
     <mesh position={position}>
@@ -38,7 +47,9 @@ const ComingSoon = () => {
       <directionalLight position={[2, 10, 2]} intensity={0.8} />
       <ambientLight intensity={1} />
       {/* Remember that shapes originate at the center from their position */}
-      <Pedestal position={[0, 0, 0]} size={[2, 2, 5, 20]} />
+      <Pedestal id={"base"} position={[0, 0, 0]} size={[2, 2, 5, 20]} />
+      <Pedestal id={"top"} position={[0, 3.5, 0]} size={[4, 2, 2, 20]} />
+      <Ring position={[0, 0, 2]} size={[1, 0.2, 15, 15]} />
       <Plane position={[0, -2.5, 0]} size={[15, 15]} />
       <OrbitControls makeDefault={true} />
     </Canvas>

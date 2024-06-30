@@ -37,10 +37,10 @@ const Sphere = ({ position, size, color }) => {
       onPointerEnter={(event) => (event.stopPropagation(), setIsHovered(true))}
       onPointerLeave={() => setIsHovered(false)}
       onClick={() => setIsClicked(!isClicked)}
-      scale={isClicked ? 1.26 : 1}
+      scale={isClicked ? 1.8 : 1}
     >
       <sphereGeometry args={size} />
-      <meshStandardMaterial color={isHovered ? "green" : "violet"} wireframe />
+      <meshStandardMaterial color={isHovered ? "yellow" : "violet"} wireframe />
     </mesh>
   );
 };
