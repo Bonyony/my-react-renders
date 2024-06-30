@@ -49,7 +49,7 @@ const ComingSoon = () => {
       {/* Remember that shapes originate at the center from their position */}
       <Pedestal id={"base"} position={[0, 0, 0]} size={[2, 2, 5, 20]} />
       <Pedestal id={"top"} position={[0, 3.5, 0]} size={[4, 2, 2, 20]} />
-      <Ring position={[0, 0, 2]} size={[1, 0.2, 15, 15]} />
+      <Ring position={[0, 0, 1.9]} size={[1, 0.2, 15, 15]} />
       <Plane position={[0, -2.5, 0]} size={[15, 15]} />
       <OrbitControls makeDefault={true} />
     </Canvas>
