@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import React from "react";
-import { Navbar, ComingSoon, Footer, DemoPage } from "./components";
+import { Navbar, ComingSoon, Footer, DemoPage, TextDemo } from "./components";
 // import { Canvas } from "@react-three/fiber";
 
 import "./App.css";
@@ -10,6 +10,7 @@ function App() {
     <>
       <Navbar />
       <DemoPage />
+      <TextDemo />
       <ComingSoon />
       <Footer />
     </>

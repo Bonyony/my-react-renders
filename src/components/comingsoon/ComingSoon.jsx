@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./comingsoon.css";
 import { Canvas, useFrame, extend } from "@react-three/fiber";
 import { FontLoader, TextGeometry } from "three/examples/jsm/Addons.js";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Text } from "@react-three/drei";
 import { DoubleSide } from "three";
 
 const Pedestal = ({ position, size, color }) => {
@@ -32,18 +32,34 @@ const Ring = ({ position, size }) => {
   );
 };
 
-const Text = ({ position, size }) => {
+// const Text = ({ position, size }) => {
+//   return (
+//     <mesh position={position}>
+//       <TextGeometry args={size} />
+//       <meshStandardMaterial color="violet" side={DoubleSide} />
+//     </mesh>
+//   );
+// };
+
+function RotatingText() {
+  const textRef = useRef();
+  useFrame(() => {
+    if (textRef.current) {
+      textRef.current.rotation.y += 0.01;
+    }
+  });
+
   return (
-    <mesh position={position}>
-      <TextGeometry args={size} />
-      <meshStandardMaterial color="violet" side={DoubleSide} />
-    </mesh>
+    <Text ref={textRef} position={[0, 6, 0]} color={0xfff000} scale={2}>
+      COMING SOON
+    </Text>
   );
-};
+}
 
 const ComingSoon = () => {
   return (
     <Canvas camera={{ position: [0, 7, 17] }}>
+      <RotatingText />
       <directionalLight position={[2, 10, 2]} intensity={0.8} />
       <ambientLight intensity={1} />
       {/* Remember that shapes originate at the center from their position */}

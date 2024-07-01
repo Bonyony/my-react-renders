@@ -40,7 +40,7 @@ const Sphere = ({ position, size, color }) => {
       scale={isClicked ? 1 : 0.5}
     >
       <sphereGeometry args={size} />
-      <meshStandardMaterial color={isHovered ? "violet" : color} />
+      <meshStandardMaterial color={isHovered ? "violet" : color} wireframe />
     </mesh>
   );
 };
@@ -107,7 +107,7 @@ const DemoPage = () => {
     </group> */}
 
       {/* <Cube position={[0, 0, 0]} size={[1, 1, 1]} color={"lightGreen"} /> */}
-      <Sphere position={[0, 0, 0]} args={[1, 30, 30]} color={"darkblue"} />
+      <Sphere position={[0, 0, 0]} args={[1, 30, 30]} color={"white"} />
       <Torus
         position={[0, 0, 0]}
         size={[2, 0.1, 30, 30]}
