@@ -1,17 +1,21 @@
 // import { useState } from "react";
 import React from "react";
 import { Navbar, ComingSoon, Footer, DemoPage, TextDemo } from "./components";
-// import { Canvas } from "@react-three/fiber";
-
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import RenderSelect from "./pages/RenderSelect";
+import AboutMe from "./pages/AboutMe";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Navbar />
-      <DemoPage />
-      <TextDemo />
-      <ComingSoon />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/renders" element={<RenderSelect />} />
+        <Route path="/aboutme" element={<AboutMe />} />
+      </Routes>
       <Footer />
     </>
   );

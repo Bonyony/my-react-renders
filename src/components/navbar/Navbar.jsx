@@ -1,32 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
     <>
       <ul className="flex items-center gap-4">
         <li>
-          <a
+          <Link
             className="hover:text-gray-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
-            href=""
+            to="/"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className="hover:text-gray-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
-            href=""
+            to="/renders"
           >
             Renders
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className="hover:text-gray-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
-            href=""
+            to="/aboutme"
           >
             About Me
-          </a>
+          </Link>
         </li>
       </ul>
     </>
