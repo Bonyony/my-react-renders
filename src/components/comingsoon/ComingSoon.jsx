@@ -45,7 +45,7 @@ function RotatingText() {
   const textRef = useRef();
   useFrame(() => {
     if (textRef.current) {
-      textRef.current.rotation.y += 0.01;
+      textRef.current.rotation.y += 0.008;
     }
   });
 
@@ -67,7 +67,7 @@ const ComingSoon = () => {
       <Pedestal id={"top"} position={[0, 3.5, 0]} size={[4, 2, 2, 20]} />
       <Ring position={[0, 0, 1.9]} size={[1, 0.2, 15, 15]} />
       <Plane position={[0, -2.5, 0]} size={[15, 15]} />
-      <OrbitControls makeDefault={true} />
+      <OrbitControls makeDefault={true} enableZoom={false} />
     </Canvas>
   );
 };
