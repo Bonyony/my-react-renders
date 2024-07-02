@@ -1,9 +1,10 @@
 import React from "react";
-import { ComingSoon, DemoPage, TextDemo } from "../components";
+import { ComingSoon, DemoPage, TextDemo, Selection } from "../components";
 
 const RenderSelect = () => {
   return (
     <>
+      <Selection />
       <DemoPage />
       <TextDemo />
       <ComingSoon />

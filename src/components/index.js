@@ -3,3 +3,4 @@ export { default as Footer } from "./footer/Footer";
 export { default as Navbar } from "./navbar/Navbar";
 export { default as DemoPage } from "./demopage/DemoPage";
 export { default as TextDemo } from "./textdemo/TextDemo";
+export { default as Selection } from "./selection/Selection";

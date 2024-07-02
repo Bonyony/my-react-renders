@@ -39,7 +39,7 @@ const Navbar = () => {
     <div className="render__navbar text-black font-bold rounded-b-3xl  w-full shadow-md">
       <div className="render__links-container flex justify-between items-center p-5 mx-auto">
         <div className="render__logo text-2xl ml-3 ">
-          <h1>Frankie's React Renders!</h1>
+          <h1>Frankie's React Renders</h1>
         </div>
         <Menu />
       </div>
