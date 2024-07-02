@@ -1,6 +1,11 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, MeshWobbleMaterial, Stars } from "@react-three/drei";
+import {
+  OrbitControls,
+  MeshWobbleMaterial,
+  Stars,
+  Text,
+} from "@react-three/drei";
 
 const Cube = ({ position, size, color }) => {
   const ref = useRef();
@@ -136,6 +141,24 @@ const DemoPage = () => {
         color={"hotpink"}
       /> */}
       <OrbitControls enableZoom={false} makeDefault={true} />
+      <Text
+        font="public/fonts/Roboto-Regular.ttf"
+        position={[-8, 1.3, -7]}
+        color={0xfff000}
+        scale={2}
+        rotation={[0, 1, 0]}
+      >
+        React{"\n"}3D{"\n"}Renders
+      </Text>
+      <Text
+        font="public/fonts/Roboto-Regular.ttf"
+        position={[6, -2.5, -3]}
+        color={0xfff000}
+        scale={2}
+        rotation={[0, -1, 0]}
+      >
+        React{"\n"}Logo
+      </Text>
     </Canvas>
   );
 };
