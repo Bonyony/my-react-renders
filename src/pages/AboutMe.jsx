@@ -24,6 +24,11 @@ const AboutMe = () => {
         These are projects which reflect things I am passionate about,
         interested in, or maybe I just think it's cool.
       </p>
+      <img
+        className="w-auto h-auto"
+        src="public/img/lookingGlass.jpeg"
+        alt="My Art"
+      />
     </div>
   );
 };
