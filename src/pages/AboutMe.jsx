@@ -11,7 +11,7 @@ const AboutMe = () => {
       <p className="flex flex-row justify-center text-xl">
         Check out my&nbsp;
         <a
-          className="hover:text-gray-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+          className="text-blue-700 hover:text-blue-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-700 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
           href="https://github.com/Bonyony"
           target="_blank"
         >

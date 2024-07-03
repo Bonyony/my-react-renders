@@ -142,7 +142,7 @@ const DemoPage = () => {
       /> */}
       <OrbitControls enableZoom={false} makeDefault={true} />
       <Text
-        font="public/fonts/Roboto-Regular.ttf"
+        font={"public/fonts/Roboto-Regular.ttf"}
         position={[-8, 1.3, -7]}
         color={0xfff000}
         scale={2}
@@ -151,7 +151,7 @@ const DemoPage = () => {
         React{"\n"}3D{"\n"}Renders
       </Text>
       <Text
-        font="public/fonts/Roboto-Regular.ttf"
+        font={"public/fonts/Roboto-Regular.ttf"}
         position={[6, -2.5, -3]}
         color={0xfff000}
         scale={2}

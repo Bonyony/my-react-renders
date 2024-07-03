@@ -1,21 +1,16 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  Text,
-  Environment,
-  Text3D,
-  Center,
-} from "@react-three/drei";
+import { OrbitControls, Environment, Text3D, Center } from "@react-three/drei";
 
 const TextDemo = () => {
+  const fontFile = "public/fonts/Roboto_Bold.json";
   return (
     <Canvas>
       <Environment files={"public/img/cannon_4k.hdr"} background />
       {/* <Text font="public/fonts/Roboto-Regular.ttf">FRANK{"\n"}FRANCIONE</Text> */}
       <Center>
         <Text3D
-          font={"public/fonts/Roboto_Bold.json"}
+          font={fontFile}
           lineHeight={0.62}
           bevelEnabled={true}
           bevelThickness={0.2}

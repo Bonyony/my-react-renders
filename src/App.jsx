@@ -13,7 +13,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/renders" element={<RenderSelect />} />
+        <Route path="/renders">
+          <Route index element={<RenderSelect />} />
+          <Route path="logo" element={<DemoPage />} />
+          <Route path="3dtext" element={<TextDemo />} />
+          <Route path="comingsoon" element={<ComingSoon />} />
+        </Route>
         <Route path="/aboutme" element={<AboutMe />} />
       </Routes>
       <Footer />

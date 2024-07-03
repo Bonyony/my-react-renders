@@ -1,5 +1,5 @@
 import React from "react";
-import { DemoPage } from "../components";
+import { DemoPage, TextDemo } from "../components";
 
 const Home = () => {
   return (
@@ -18,6 +18,7 @@ const Home = () => {
         </div>
       </div>
       <DemoPage />
+      <TextDemo />
     </>
   );
 };

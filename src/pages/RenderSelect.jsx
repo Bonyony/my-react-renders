@@ -5,9 +5,6 @@ const RenderSelect = () => {
   return (
     <>
       <Selection />
-      <DemoPage />
-      <TextDemo />
-      <ComingSoon />
     </>
   );
 };

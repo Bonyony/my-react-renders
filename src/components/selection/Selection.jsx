@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Selection = () => {
   return (
@@ -7,9 +8,17 @@ const Selection = () => {
         Select a render to view
       </h1>
       <div className="grid" id="render_card">
-        <a href="">React Logo</a>
-        <a href="">3D Text</a>
-        <a href="">Coming Soon...</a>
+        <ul className="flex items-center gap-4">
+          <li>
+            <Link to="/renders/logo">React Logo</Link>
+          </li>
+          <li>
+            <Link to="/renders/3dtext">3D Text</Link>
+          </li>
+          <li>
+            <Link to="/renders/comingsoon">Coming Soon</Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
