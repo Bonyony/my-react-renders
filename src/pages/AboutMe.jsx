@@ -23,7 +23,12 @@ const AboutMe = () => {
           I am a Front-End / React Developer with a specialization in 3D
           rendering. <br />
           These are projects which reflect things I am passionate about,
-          interested in, or maybe I just think it's cool.
+          interested in, or maybe I just think it's cool. <br />
+          Though most of these renderings are simple showcases of specific
+          skills, I intend for them to fit into my larger design perspective.{" "}
+          <br />
+          In my opinion, 3D graphics are best used sparingly in a website and
+          are best suited as something that draws the user's attention.
         </p>
       </div>
       <img

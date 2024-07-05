@@ -26,7 +26,7 @@ const RenderSelect = () => {
             className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-yellow-500 hover:text-white transition-all duration-200"
           >
             3D Text
-            <p className="text-sm">My name floating in a HDR image</p>
+            <p className="text-sm">My name floating in an HDR image</p>
             <p className="text-sm font-normal">(Right-Click disabled)</p>
           </Link>
 
