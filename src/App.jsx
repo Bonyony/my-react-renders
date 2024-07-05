@@ -1,6 +1,13 @@
 // import { useState } from "react";
 import React from "react";
-import { Navbar, ComingSoon, Footer, DemoPage, TextDemo } from "./components";
+import {
+  Navbar,
+  ComingSoon,
+  Footer,
+  DemoPage,
+  TextDemo,
+  SoundDemo,
+} from "./components";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import RenderSelect from "./pages/RenderSelect";
@@ -18,6 +25,7 @@ function App() {
           <Route path="logo" element={<DemoPage />} />
           <Route path="3dtext" element={<TextDemo />} />
           <Route path="comingsoon" element={<ComingSoon />} />
+          <Route path="sound" element={<SoundDemo />} />
         </Route>
         <Route path="/aboutme" element={<AboutMe />} />
       </Routes>

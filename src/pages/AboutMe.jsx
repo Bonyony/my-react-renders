@@ -20,7 +20,7 @@ const AboutMe = () => {
           </a>
         </p>
         <p className="flex my-4 text-xl ">
-          I am a Front-end / React Developer with a specialization in 3D
+          I am a Front-End / React Developer with a specialization in 3D
           rendering. <br />
           These are projects which reflect things I am passionate about,
           interested in, or maybe I just think it's cool.
