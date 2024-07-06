@@ -5,26 +5,27 @@ import { BackgroundOne } from "../components";
 const RenderSelect = () => {
   return (
     <>
-      <div className="m-4 p-4 absolute z-10 w-full">
+      <div className="my-4 p-4 absolute z-10 w-full">
         <h1 className="text-6xl font-bold text-center">
           Select a Render to View
         </h1>
 
+        {/* Possibly add bg-white to the link buttons? Can obscure the animation, which depends on what it ends up as */}
         <div className="grid grid-cols-3 gap-8 my-8 mx-16">
           <Link
             to="/renders/logo"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-blue-900 hover:text-white transition-all duration-200"
+            className="text-center  border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-blue-900 hover:text-white transition-all duration-200"
           >
             React Logo
-            <p className="text-sm">
+            <p className="text-sm ">
               My idea for a 3D version of the React Logo
             </p>
-            <p className="text-sm font-normal">(Scroll disabled)</p>
+            <p className="text-sm font-normal ">(Scroll disabled)</p>
           </Link>
 
           <Link
             to="/renders/3dtext"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-green-700 hover:text-white transition-all duration-200"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-green-600 hover:text-white transition-all duration-200"
           >
             3D Text
             <p className="text-sm">My name floating in an HDR image</p>
@@ -44,7 +45,7 @@ const RenderSelect = () => {
             to="/renders/sound"
             className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-rose-400 hover:text-white transition-all duration-200"
           >
-            Boombox
+            Boombox (in progress)
             <p className="text-sm">Positional audio and 3D buttons</p>
             <p className="text-sm font-normal">(All mouse controls enabled)</p>
           </Link>
@@ -57,10 +58,14 @@ const RenderSelect = () => {
           </Link>
 
           <Link
-            to=""
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-black hover:text-white transition-all duration-200"
+            to="/renders/backgroundone"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-purple-500 hover:text-white transition-all duration-200"
           >
-            Nothing Yet...
+            Background One
+            <p className="text-sm">The background of this page!</p>
+            <p className="text-sm font-normal">
+              (All mouse controls disabled!)
+            </p>
           </Link>
         </div>
         <p className="py-4  text-center">

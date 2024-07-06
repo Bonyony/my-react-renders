@@ -35,16 +35,16 @@ const BackgroundOne = () => {
   return (
     <>
       <Canvas camera={{ position: [0, 25, 0] }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight intensity={1} position={[2, 3, 3]} />
+        <ambientLight intensity={0.8} />
+        <directionalLight intensity={1} position={[0, 20, 5]} />
         {/* Cubes positive */}
         <Cube position={[-15, 0, 0]} color={"snow"} factor={15} />
         <Cube position={[-20, 0, 0]} color={"orange"} factor={10} />
-        <Cube position={[-3, 0, 0]} color={"lightblue"} factor={20} />
+        <Cube position={[-10, 0, 0]} color={"lightblue"} factor={20} />
         {/* Cubes negative */}
         <Cube position={[15, 0, 0]} color={"snow"} factor={15} />
         <Cube position={[20, 0, 0]} color={"orange"} factor={10} />
-        <Cube position={[3, 0, 0]} color={"lightblue"} factor={20} />
+        <Cube position={[10, 0, 0]} color={"lightblue"} factor={20} />
 
         {/* Spheres */}
         {/* <Sphere

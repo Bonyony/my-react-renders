@@ -25,10 +25,10 @@ const AboutMe = () => {
           These are projects which reflect things I am passionate about,
           interested in, or maybe I just think it's cool. <br />
           Though most of these renderings are simple showcases of specific
-          skills, I intend for them to fit into my larger design perspective.{" "}
-          <br />
+          skills, they fit into my larger design perspective. <br />
           In my opinion, 3D graphics are best used sparingly in a website and
-          are best suited as something that draws the user's attention.
+          are best suited as something that draws the user's attention. This
+          site doesn't really do that...
         </p>
       </div>
       <img

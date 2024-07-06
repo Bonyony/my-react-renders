@@ -7,6 +7,7 @@ import {
   DemoPage,
   TextDemo,
   SoundDemo,
+  BackgroundOne,
 } from "./components";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -26,6 +27,7 @@ function App() {
           <Route path="3dtext" element={<TextDemo />} />
           <Route path="comingsoon" element={<ComingSoon />} />
           <Route path="sound" element={<SoundDemo />} />
+          <Route path="backgroundone" element={<BackgroundOne />} />
         </Route>
         <Route path="/aboutme" element={<AboutMe />} />
       </Routes>

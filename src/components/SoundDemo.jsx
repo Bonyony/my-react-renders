@@ -31,7 +31,7 @@ const Plane = ({ position, size, color }) => {
 const PlayButton = () => {
   return (
     <button
-      onClick={() => PositionalAudio.play()}
+      onClick={() => console.log("clicked")}
       className="font-bold p-1 rounded-md border-black border-2 bg-yellow-300 text-black hover:bg-blue-900 hover:text-white transition-all duration-200"
     >
       PLAY!
