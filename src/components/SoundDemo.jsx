@@ -7,6 +7,7 @@ import {
   PositionalAudio,
   Text,
   Html,
+  Sparkles,
 } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import {
@@ -29,7 +30,10 @@ const Plane = ({ position, size, color }) => {
 
 const PlayButton = () => {
   return (
-    <button className="font-bold p-1 rounded-md border-black border-2 bg-yellow-300 text-black hover:bg-blue-900 hover:text-white transition-all duration-200">
+    <button
+      onClick={() => PositionalAudio.play()}
+      className="font-bold p-1 rounded-md border-black border-2 bg-yellow-300 text-black hover:bg-blue-900 hover:text-white transition-all duration-200"
+    >
       PLAY!
     </button>
   );
@@ -40,7 +44,7 @@ const SoundDemo = () => {
   //   const song =
 
   return (
-    <Canvas camera={{ position: [0, 7, 12] }}>
+    <Canvas camera={{ position: [0, 7, 15] }}>
       <ambientLight intensity={0.5} />
       <OrbitControls />
 
@@ -53,12 +57,12 @@ const SoundDemo = () => {
         <Text position={[12, 7, 0]} color={"black"} fontSize={1}>
           "Pssst, hit the play button..."
         </Text>
-        <Text position={[20, 4, 0]} color={"black"} fontSize={1}>
+        <Text position={[13, 4, 0]} color={"black"} fontSize={1}>
           "Then zoom in and out..."
         </Text>
       </Billboard>
 
-      <mesh position={[-8, 7.5, 0]}>
+      <mesh position={[-8, 5.5, 0]}>
         <Html
           occlude={true}
           as="div" // Wrapping element (default: 'div')
@@ -72,13 +76,16 @@ const SoundDemo = () => {
 
       <PositionalAudio
         url="/sounds/01 - UW.MountainPassageRemix.mp3"
-        distance={20}
-        loop
+        distance={25}
+        play={true}
+        hasPlaybackControl={true}
+        // autoplay={!true}
       />
 
-      <Plane position={[0, 0, 0]} size={[15, 15]} color={"blue"} />
+      <Plane position={[0, -2, 0]} size={[15, 15]} color={"blue"} />
+      {/* <Sparkles scale={3} /> */}
 
-      <primitive object={model.scene} scale={3} />
+      <primitive object={model.scene} scale={3} position={[0, -2, 0]} />
     </Canvas>
   );
 };

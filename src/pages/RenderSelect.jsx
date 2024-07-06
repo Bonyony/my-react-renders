@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BackgroundOne } from "../components";
 
 const RenderSelect = () => {
   return (
     <>
-      <div className="m-4 p-4">
+      <div className="m-4 p-4 absolute z-10 w-full">
         <h1 className="text-6xl font-bold text-center">
           Select a Render to View
         </h1>
@@ -23,7 +24,7 @@ const RenderSelect = () => {
 
           <Link
             to="/renders/3dtext"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-yellow-500 hover:text-white transition-all duration-200"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-green-700 hover:text-white transition-all duration-200"
           >
             3D Text
             <p className="text-sm">My name floating in an HDR image</p>
@@ -43,8 +44,9 @@ const RenderSelect = () => {
             to="/renders/sound"
             className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-rose-400 hover:text-white transition-all duration-200"
           >
-            Sound Demo
-            <p className="text-sm">Under construction...</p>
+            Boombox
+            <p className="text-sm">Positional audio and 3D buttons</p>
+            <p className="text-sm font-normal">(All mouse controls enabled)</p>
           </Link>
 
           <Link
@@ -67,6 +69,7 @@ const RenderSelect = () => {
           Scroll-Wheel: Zoom (In / Out)
         </p>
       </div>
+      <BackgroundOne />
     </>
   );
 };

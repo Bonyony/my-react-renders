@@ -5,7 +5,7 @@ import { OrbitControls, Environment, Text3D, Center } from "@react-three/drei";
 const TextDemo = () => {
   const fontFile = "/fonts/Roboto_Bold.json";
   return (
-    <Canvas>
+    <Canvas camera={{ position: [-7, 4, 6] }}>
       <Environment files={"/img/cannon_4k.hdr"} background />
       {/* <Text font="public/fonts/Roboto-Regular.ttf">FRANK{"\n"}FRANCIONE</Text> */}
       <Center>
