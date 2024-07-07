@@ -11,7 +11,7 @@ const Cube = ({ position, size, color, factor }) => {
 
   return (
     <mesh position={position} ref={ref}>
-      <boxGeometry args={[3, 15, 3]} />
+      <boxGeometry args={[3, 20, 3]} />
       <meshStandardMaterial color={color} />
     </mesh>
   );

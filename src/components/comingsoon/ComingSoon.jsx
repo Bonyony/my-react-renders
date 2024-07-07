@@ -2,22 +2,21 @@ import React, { useRef, useState } from "react";
 import "./comingsoon.css";
 import { Canvas, useFrame, extend } from "@react-three/fiber";
 import { FontLoader, TextGeometry } from "three/examples/jsm/Addons.js";
-import { OrbitControls, Text, MeshReflectorMaterial } from "@react-three/drei";
-import { DoubleSide } from "three";
-
-const Pedestal = ({ position, size, color }) => {
-  return (
-    <mesh position={position}>
-      <cylinderGeometry args={size} />
-      <meshStandardMaterial color={"lightblue"} />
-    </mesh>
-  );
-};
+import {
+  OrbitControls,
+  Text,
+  MeshReflectorMaterial,
+  useGLTF,
+  Text3D,
+  MeshWobbleMaterial,
+  Center,
+} from "@react-three/drei";
+import { DoubleSide, Mesh } from "three";
 
 const Plane = ({ position, size, color }) => {
   return (
     <mesh position={position} rotation-x={-Math.PI * 0.5}>
-      <planeGeometry args={size} />
+      <circleGeometry args={size} />
       {/* <meshStandardMaterial color="violet" side={DoubleSide} /> */}
       <MeshReflectorMaterial
         blur={[0, 0]} // Blur ground reflections (width, height), 0 skips blur
@@ -38,48 +37,55 @@ const Plane = ({ position, size, color }) => {
   );
 };
 
-const Ring = ({ position, size }) => {
+// function RotatingText() {
+//   const textRef = useRef();
+//   useFrame(() => {
+//     if (textRef.current) {
+//       textRef.current.rotation.y += 0.008;
+//     }
+//   });
+
+//   return (
+//     <Text
+//       ref={textRef}
+//       position={[0, 10, 0]}
+//       color={0xfff000}
+//       scale={2}
+//       lineHeight={0.62}
+//     >
+//       COMING SOON
+//     </Text>
+//   );
+// }
+
+const WobbleText = ({}) => {
+  const fontFile = "/fonts/Roboto_Bold.json";
   return (
-    <mesh position={position}>
-      <torusGeometry args={size} />
-      <meshStandardMaterial color={"yellow"} />
+    <mesh position={[0, 10, 0]}>
+      <Center>
+        <Text3D font={fontFile} lineHeight={0.62}>
+          Coming Soon
+          <MeshWobbleMaterial factor={0.2} speed={0.75} />
+        </Text3D>
+      </Center>
     </mesh>
   );
 };
 
-function RotatingText() {
-  const textRef = useRef();
-  useFrame(() => {
-    if (textRef.current) {
-      textRef.current.rotation.y += 0.008;
-    }
-  });
-
-  return (
-    <Text
-      ref={textRef}
-      position={[0, 6, 0]}
-      color={0xfff000}
-      scale={2}
-      lineHeight={0.62}
-    >
-      COMING SOON
-    </Text>
-  );
-}
+// Scifi Pod by Quaternius
 
 const ComingSoon = () => {
+  const model = useGLTF("/models/Scifi Pod.glb");
   return (
-    <Canvas style={{ background: "black" }} camera={{ position: [0, 7, 17] }}>
-      <RotatingText />
+    <Canvas style={{ background: "black" }} camera={{ position: [0, 12, 19] }}>
+      <WobbleText />
       <directionalLight position={[2, 10, 2]} intensity={0.8} />
-      <ambientLight intensity={0.1} />
+      <ambientLight intensity={0.7} />
       {/* Remember that shapes originate at the center from their position */}
-      <Pedestal id={"base"} position={[0, 0, 0]} size={[2, 2, 5, 20]} />
-      <Pedestal id={"top"} position={[0, 3.5, 0]} size={[4, 2, 2, 20]} />
-      <Ring position={[0, 0, 1.9]} size={[1, 0.2, 15, 15]} />
-      <Plane position={[0, -2.5, 0]} size={[20, 15]} />
-      <OrbitControls makeDefault={true} enableZoom={false} />
+      <primitive object={model.scene} scale={3} position={[0, -2, 0]} />
+
+      <Plane position={[0, -2, 0]} size={[10, 50]} />
+      <OrbitControls makeDefault={true} enableZoom={true} />
     </Canvas>
   );
 };

@@ -32,7 +32,7 @@ const AboutMe = () => {
         </p>
       </div>
       <img
-        className="w-96 h-96 m-4"
+        className="w-96 h-96 m-4 rounded-2xl"
         src="public/img/lookingGlass.jpeg"
         alt="My Art"
       />
