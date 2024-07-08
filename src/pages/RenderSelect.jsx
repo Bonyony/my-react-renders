@@ -11,7 +11,7 @@ const RenderSelect = () => {
         </h1>
 
         {/* Possibly add bg-white to the link buttons? Can obscure the animation, which depends on what it ends up as */}
-        <div className="grid grid-cols-3 gap-8 my-8 mx-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 mx-16">
           <Link
             to="/renders/logo"
             className="text-center  border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-blue-900 hover:text-white transition-all duration-200"
