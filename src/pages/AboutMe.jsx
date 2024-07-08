@@ -24,8 +24,8 @@ const AboutMe = () => {
           Graphics. <br />
           These are projects which reflect things I am passionate about,
           interested in, or maybe I just think it's cool. <br />
-          Though most of these renderings are simple showcases of specific
-          skills, they fit into my larger design perspective. <br />
+          Though most of these renderings are showcases of specific skills, they
+          fit into my larger design perspective. <br />
           In my opinion, 3D graphics are best used sparingly in a website and
           are best suited as something that draws the user's attention. This
           site doesn't really do that...

@@ -4,14 +4,14 @@ import { Canvas, useFrame, extend } from "@react-three/fiber";
 import { FontLoader, TextGeometry } from "three/examples/jsm/Addons.js";
 import {
   OrbitControls,
-  Text,
+  Cloud,
   MeshReflectorMaterial,
   useGLTF,
   Text3D,
   MeshWobbleMaterial,
   Center,
 } from "@react-three/drei";
-import { DoubleSide, Mesh } from "three";
+import { Mesh } from "three";
 
 const Plane = ({ position, size, color }) => {
   return (
@@ -37,33 +37,12 @@ const Plane = ({ position, size, color }) => {
   );
 };
 
-// function RotatingText() {
-//   const textRef = useRef();
-//   useFrame(() => {
-//     if (textRef.current) {
-//       textRef.current.rotation.y += 0.008;
-//     }
-//   });
-
-//   return (
-//     <Text
-//       ref={textRef}
-//       position={[0, 10, 0]}
-//       color={0xfff000}
-//       scale={2}
-//       lineHeight={0.62}
-//     >
-//       COMING SOON
-//     </Text>
-//   );
-// }
-
 const WobbleText = ({}) => {
   const fontFile = "/fonts/Roboto_Bold.json";
   return (
-    <mesh position={[0, 10, 0]}>
+    <mesh position={[0, 10.5, 0]}>
       <Center>
-        <Text3D font={fontFile} lineHeight={0.62}>
+        <Text3D font={fontFile} size={2} lineHeight={0.62}>
           Coming Soon
           <MeshWobbleMaterial factor={0.2} speed={0.75} />
         </Text3D>
@@ -83,6 +62,8 @@ const ComingSoon = () => {
       <ambientLight intensity={0.7} />
       {/* Remember that shapes originate at the center from their position */}
       <primitive object={model.scene} scale={3} position={[0, -2, 0]} />
+
+      <Cloud segments={40} bounds={[15, 5, 5]} volume={12} color="lightblue" />
 
       <Plane position={[0, -2, 0]} size={[10, 50]} />
       <OrbitControls makeDefault={true} enableZoom={true} />
