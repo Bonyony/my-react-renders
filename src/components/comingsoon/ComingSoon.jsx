@@ -11,7 +11,7 @@ import {
   MeshWobbleMaterial,
   Center,
 } from "@react-three/drei";
-import { Mesh } from "three";
+import { DoubleSide } from "three";
 
 const Plane = ({ position, size, color }) => {
   return (
@@ -32,6 +32,7 @@ const Plane = ({ position, size, color }) => {
         distortion={1} // Amount of distortion based on the distortionMap texture
         debug={0}
         reflectorOffset={0.2} // Offsets the virtual camera that projects the reflection. Useful when the reflective surface is some distance from the object's origin (default = 0)
+        side={DoubleSide}
       />
     </mesh>
   );

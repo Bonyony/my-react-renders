@@ -7,15 +7,9 @@ import {
   PositionalAudio,
   Text,
   Html,
-  Sparkles,
 } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
-import {
-  MeshStandardMaterial,
-  DoubleSide,
-  AudioLoader,
-  AudioListener,
-} from "three";
+import { DoubleSide, AudioLoader, AudioListener } from "three";
 
 // Boombox by Poly by Google [CC-BY] via Poly Pizza
 
