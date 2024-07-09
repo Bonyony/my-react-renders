@@ -5,10 +5,13 @@ import { BackgroundOne } from "../components";
 const RenderSelect = () => {
   return (
     <>
-      <div className="my-4 p-4 absolute z-10 w-full">
+      <div className="my-4 p-4 lg:absolute z-10 w-full">
         <h1 className="text-6xl font-bold text-center">
           Select a Render to View
         </h1>
+        <p className="text-center text-rose-800 lg:hidden">
+          (This page looks coolest on larger screens)
+        </p>
 
         {/* Possibly add bg-white to the link buttons? Can obscure the animation, which depends on what it ends up as */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 mx-16">
