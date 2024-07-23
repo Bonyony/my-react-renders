@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   OrbitControls,
@@ -22,23 +23,19 @@ const Plane = ({ position, size, color }) => {
   );
 };
 
-const PlayButton = () => {
-  return (
-    <button
-      onClick={() => console.log("clicked")}
-      className="font-bold p-1 rounded-md border-black border-2 bg-yellow-300 text-black hover:bg-blue-900 hover:text-white transition-all duration-200"
-    >
-      PLAY!
-    </button>
-  );
-};
+// function PlayButton() {
+//   return (
+
+//   );
+// }
 
 const SoundDemo = () => {
   const model = useGLTF("/models/Boombox.glb");
   //   const song =
+  const [play, setPlay] = useState(false);
 
   return (
-    <Canvas camera={{ position: [0, 7, 15] }}>
+    <Canvas camera={{ position: [0, 5, 15] }}>
       <ambientLight intensity={0.5} />
       <OrbitControls />
 
@@ -48,11 +45,14 @@ const SoundDemo = () => {
         lockY={false}
         lockZ={false} // Lock the rotation on the z axis (default=false)
       >
-        <Text position={[12, 7, 0]} color={"black"} fontSize={1}>
+        <Text position={[12, 7, 0]} color={"black"} fontSize={0.8}>
           "Pssst, hit the play button..."
         </Text>
-        <Text position={[13, 4, 0]} color={"black"} fontSize={1}>
+        <Text position={[13, 4, 0]} color={"black"} fontSize={0.8}>
           "Then zoom in and out..."
+        </Text>
+        <Text position={[14, 1, 0]} color={"black"} fontSize={0.8}>
+          "Right click and drag me all around..."
         </Text>
       </Billboard>
 
@@ -62,24 +62,32 @@ const SoundDemo = () => {
           as="div" // Wrapping element (default: 'div')
           distanceFactor={35}
         >
-          <PlayButton />
+          <button
+            onClick={() => setPlay(!play)}
+            className="font-bold p-1 rounded-md border-black border-2 bg-yellow-300 text-black hover:bg-blue-900 hover:text-white transition-all duration-200"
+          >
+            PLAY!
+          </button>
         </Html>
       </mesh>
-
-      {/* <AudioListener /> */}
-
-      <PositionalAudio
-        url="/sounds/01 - UW.MountainPassageRemix.mp3"
-        distance={25}
-        play={true}
-        hasPlaybackControl={true}
-        // autoplay={!true}
-      />
+      <mesh>
+        {/* <AudioListener /> */}
+        {play === true && (
+          <PositionalAudio
+            url="/sounds/01 - UW.MountainPassageRemix.mp3"
+            distance={25}
+            autoplay
+            loop={false}
+            // autoplay={!true}
+          />
+        )}
+      </mesh>
 
       <Plane position={[0, -2, 0]} size={[15, 15]} color={"blue"} />
       {/* <Sparkles scale={3} /> */}
-
-      <primitive object={model.scene} scale={3} position={[0, -2, 0]} />
+      <mesh>
+        <primitive object={model.scene} scale={3} position={[0, -2, 0]} />
+      </mesh>
     </Canvas>
   );
 };

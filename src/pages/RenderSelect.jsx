@@ -9,7 +9,7 @@ const RenderSelect = () => {
         <h1 className="text-6xl font-bold text-center">
           Select a Render to View
         </h1>
-        <p className="text-center text-rose-800 lg:hidden">
+        <p className="text-center  lg:hidden">
           (This page looks coolest on larger screens)
         </p>
 
@@ -48,7 +48,7 @@ const RenderSelect = () => {
             to="/renders/sound"
             className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-rose-400 hover:text-white transition-all duration-200"
           >
-            Boombox (in progress)
+            Boombox (ft. My Music)
             <p className="text-sm">Positional audio and 3D buttons</p>
             <p className="text-sm font-normal">(All mouse controls enabled)</p>
           </Link>

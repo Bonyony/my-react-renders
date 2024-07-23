@@ -1,11 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  OrbitControls,
-  MeshWobbleMaterial,
-  Stars,
-  Text,
-} from "@react-three/drei";
+import { OrbitControls, Stars, Text } from "@react-three/drei";
 
 const Cube = ({ position, size, color }) => {
   const ref = useRef();
@@ -77,27 +72,6 @@ const Torus = ({ position, size, color, rotation, factor }) => {
   );
 };
 
-const TorusKnot = ({ position, size, color }) => {
-  //   const ref = useRef();
-  //   useFrame((state, delta) => {
-  //     ref.current.rotation.x += delta;
-  //     ref.current.rotation.y += delta;
-  //     ref.current.position.z = Math.sin(state.clock.elapsedTime) * 3;
-  //   });
-  return (
-    <mesh
-      position={position}
-      //  ref={ref}
-    >
-      <torusKnotGeometry args={size} />
-      {/* <meshStandardMaterial color={color} /> */}
-      <MeshWobbleMaterial factor={1.2} speed={2} />
-    </mesh>
-  );
-};
-
-// camera={{ position: [0, 2, 4] }}
-
 const DemoPage = () => {
   return (
     <Canvas camera={{ position: [0, 1, 4] }} style={{ background: "black" }}>
@@ -105,13 +79,6 @@ const DemoPage = () => {
       <directionalLight position={[0, 0, 2]} intensity={1} />
       <ambientLight intensity={0.5} />
 
-      {/* <group position={[0, -1, 0]}>
-      <Cube position={[1, 0, 0]} color={"lightGreen"} size={[1, 1, 1]} />
-      <Cube position={[-1, 0, 0]} color={"hotpink"} size={[1, 1, 1]} />
-      <Cube position={[-1, 2, 0]} color={"orange"} size={[1, 1, 1]} />
-    </group> */}
-
-      {/* <Cube position={[0, 0, 0]} size={[1, 1, 1]} color={"lightGreen"} /> */}
       <Sphere position={[0, 0, 0]} args={[1, 30, 30]} color={"white"} />
       <Torus
         position={[0, 0, 0]}
@@ -135,11 +102,6 @@ const DemoPage = () => {
         factor={2.5 * Math.random()}
       />
 
-      {/* <TorusKnot
-        position={[0, 0, 0]}
-        size={[0.5, 0.1, 1000, 50]}
-        color={"hotpink"}
-      /> */}
       <OrbitControls enableZoom={false} makeDefault={true} />
       <Text
         font={"/fonts/Roboto-Regular.ttf"}
