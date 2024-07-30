@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { useState, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+
 import {
   OrbitControls,
   useTexture,
@@ -18,6 +19,16 @@ const Art = () => {
   const model = useGLTF("/models/netsuke_-_snake_curled_around_a_turtle.glb");
   const model2 = useGLTF("/models/loie_fuller_sculpture_by_joseph_kratina.glb");
 
+  const ref = useRef();
+
+  useFrame((delta) => {
+    const speed = 0.2;
+    ref.current.rotation.x += delta * speed;
+    ref.current.rotation.y += delta * speed;
+
+    // ref.current.position.z = Math.sin(state.clock.elapsedTime) * 3;
+  });
+
   return (
     <>
       <ambientLight intensity={0.5} />
@@ -26,44 +37,44 @@ const Art = () => {
       <mesh>
         <primitive
           object={model.scene}
-          position={[0, 30, 10]}
+          position={[0, 0, 0]}
           scale={5}
           position-y={-1}
         />
       </mesh>
+      {/* Left */}
       <SeeThru
         texture={"/img/lookingGlass.jpeg"}
-        position-x={-1.5}
+        position-x={-4.5}
         rotation-y={Math.PI / 8}
+        ref={ref}
       >
         {/* snake + turtle render */}
         <mesh>
-          <primitive
-            object={model.scene}
-            position={[0, 0, 0]}
-            scale={5}
-            position-y={-1}
-          />
+          <primitive object={model.scene} position={[1.5, 0, 0]} scale={5} />
         </mesh>
       </SeeThru>
       <mesh>
         <primitive
           object={model2.scene}
-          position={[1.5, 0, 0]}
+          position={[0, 0, 3]}
           scale={5}
           position-y={-1}
         />
       </mesh>
+      {/* Middle */}
+      <SeeThru texture={"/img/CoastalBliss.jpg"} position-z={-0.75}></SeeThru>
+      {/* Right */}
       <SeeThru
         texture={"/img/HyraxCake.jpg"}
-        position-x={1.5}
+        position-x={4.5}
         rotation-y={-Math.PI / 8}
       >
         {/* statue */}
         <mesh>
           <primitive
             object={model2.scene}
-            position={[1.5, 0, 0]}
+            position={[3, 0, 3]}
             scale={5}
             position-y={-1}
           />
@@ -82,7 +93,7 @@ const SeeThru = ({ children, texture, ...props }) => {
         font="/fonts/Roboto-Regular.ttf"
         fontSize={0.3}
         position={[0, -1.3, 0.051]}
-        color="indigo"
+        color="white"
       >
         Chumbo Wumbo Wee!
       </Text>
@@ -92,7 +103,7 @@ const SeeThru = ({ children, texture, ...props }) => {
           <Environment preset="sunset" />
 
           <mesh>
-            <sphereGeometry args={[3, 32, 32]} />
+            <sphereGeometry args={[3, 32, 32]} rotateY={Math.PI / 8} />
             <meshStandardMaterial map={map} side={THREE.BackSide} />
           </mesh>
         </MeshPortalMaterial>
@@ -104,7 +115,7 @@ const SeeThru = ({ children, texture, ...props }) => {
 const ArtGallery = () => {
   return (
     // May need to add fov to this camera argument, ex: {position:[1,1,1], fov:45}
-    <Canvas shadows camera={{ position: [0, 0, 10], fov: 90 }}>
+    <Canvas shadows color="black" camera={{ position: [0, 0, 10], fov: 30 }}>
       <Art />
     </Canvas>
   );
