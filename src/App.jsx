@@ -9,6 +9,7 @@ import {
   SoundDemo,
   BackgroundOne,
   Loading,
+  ArtGallery,
 } from "./components";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -30,6 +31,7 @@ function App() {
             <Route path="comingsoon" element={<ComingSoon />} />
             <Route path="sound" element={<SoundDemo />} />
             <Route path="backgroundone" element={<BackgroundOne />} />
+            <Route path="gallery" element={<ArtGallery />} />
           </Route>
           <Route path="/aboutme" element={<AboutMe />} />
         </Routes>

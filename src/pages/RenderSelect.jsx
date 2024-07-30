@@ -54,10 +54,12 @@ const RenderSelect = () => {
           </Link>
 
           <Link
-            to=""
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-black hover:text-white transition-all duration-200"
+            to="/renders/gallery"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-orange-600 hover:text-white transition-all duration-200"
           >
-            Nothing Yet...
+            Statue Gallery
+            <p className="text-sm">Experimental State [STAY BACK]</p>
+            <p className="text-sm font-normal">(All mouse controls enabled)</p>
           </Link>
 
           <Link

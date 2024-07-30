@@ -6,3 +6,4 @@ export { default as TextDemo } from "./textdemo/TextDemo";
 export { default as SoundDemo } from "./SoundDemo";
 export { default as BackgroundOne } from "./BackgroundOne";
 export { default as Loading } from "./Loading";
+export { default as ArtGallery } from "./ArtGallery";
