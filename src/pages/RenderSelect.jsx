@@ -36,15 +36,6 @@ const RenderSelect = () => {
           </Link>
 
           <Link
-            to="/renders/comingsoon"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-red-700 hover:text-white transition-all duration-200"
-          >
-            Coming Soon
-            <p className="text-sm">For when there is more to be done</p>
-            <p className="text-sm font-normal">(All mouse controls enabled)</p>
-          </Link>
-
-          <Link
             to="/renders/sound"
             className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-rose-400 hover:text-white transition-all duration-200"
           >
@@ -57,7 +48,7 @@ const RenderSelect = () => {
             to="/renders/gallery"
             className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-orange-600 hover:text-white transition-all duration-200"
           >
-            Statue Gallery
+            Temporal Art Gallery
             <p className="text-sm">Experimental State [STAY BACK]</p>
             <p className="text-sm font-normal">(All mouse controls enabled)</p>
           </Link>
@@ -71,6 +62,15 @@ const RenderSelect = () => {
             <p className="text-sm font-normal">
               (All mouse controls disabled!)
             </p>
+          </Link>
+
+          <Link
+            to="/renders/comingsoon"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-red-700 hover:text-white transition-all duration-200"
+          >
+            Coming Soon
+            <p className="text-sm">For when there is more to be done</p>
+            <p className="text-sm font-normal">(All mouse controls enabled)</p>
           </Link>
         </div>
         <p className="py-4  text-center">
