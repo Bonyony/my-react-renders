@@ -35,7 +35,7 @@ const AboutMe = () => {
         </div>
         <img
           className="w-auto max-w-96 h-auto max-h-96 m-4 rounded-2xl flex align-middle justify-center"
-          src="public/img/lookingGlass.jpeg"
+          src="/img/lookingGlass.jpeg"
           alt="My Art"
         />
       </div>
