@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BackgroundOne } from "../components";
+import { motion } from "framer-motion";
 
 const RenderSelect = () => {
   return (
     <>
       <div className="my-4 p-4 lg:absolute z-10 w-full">
-        <h1 className="text-6xl font-bold text-center">
+        <motion.h1
+          initial={{ x: "-200%" }}
+          animate={{ x: "0%" }}
+          transition={{ type: "spring", stiffness: 70 }}
+          className="text-6xl font-bold text-center"
+        >
           Select a Render to View
-        </h1>
+        </motion.h1>
         <p className="text-center  lg:hidden">
           (This page looks coolest on larger screens)
         </p>

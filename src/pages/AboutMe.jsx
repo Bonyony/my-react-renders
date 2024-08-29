@@ -11,14 +11,24 @@ const AboutMe = () => {
             Frank Francione
           </h1>
 
-          <p className="flex flex-row my-4 font-bold text-xl md:text-3xl">
-            Check out my&nbsp;
+          <p className="flex flex-row mt-4 font-bold text-xl md:text-3xl">
+            My&nbsp;
             <a
               className="text-blue-700 hover:text-blue-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-700 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
               href="https://github.com/Bonyony"
               target="_blank"
             >
               GitHub
+            </a>
+          </p>
+          <p className="flex flex-row mt-2 mb-4 font-bold text-xl md:text-3xl">
+            My&nbsp;
+            <a
+              className="text-blue-700 hover:text-blue-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-700 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+              href="https://frankfrancione.com/"
+              target="_blank"
+            >
+              Website
             </a>
           </p>
           <p className="flex my-4 text-md md:text-xl ">
