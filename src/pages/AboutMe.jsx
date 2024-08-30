@@ -31,7 +31,7 @@ const AboutMe = () => {
               Website
             </a>
           </p>
-          <p className="flex my-4 text-md md:text-xl ">
+          <p className="flex my-4 text-sm md:text-base ">
             I am a Front-End / React Developer with a specialization in 3D and
             Graphics. <br />
             These are projects which reflect things I am passionate about,

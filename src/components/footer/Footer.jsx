@@ -6,7 +6,7 @@ const Footer = () => {
       <h3 className="text-lg sm:text-2xl font-bold flex justify-center">
         Look at these wicked shapes!!!
       </h3>
-      <div className="flex justify-center">
+      <div className="flex justify-center text-sm">
         <p>
           Made with love by{" "}
           <a

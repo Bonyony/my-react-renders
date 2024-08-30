@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <div className="p-6">
-        <h1 className="text-shadow-pop-tr flex justify-center text-gray-700 font-bold text-xl sm:text-4xl lg:text-6xl">
+        <h1 className="bungee text-shadow-pop-tr flex justify-center text-black text-xl sm:text-4xl lg:text-6xl">
           Welcome to my 3D demo page!
         </h1>
         <div className="flex justify-center ">
