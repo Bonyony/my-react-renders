@@ -11,11 +11,15 @@ const RenderSelect = () => {
           initial={{ x: "-200%" }}
           animate={{ x: "0%" }}
           transition={{ type: "spring", stiffness: 70 }}
-          className="bungee text-6xl font-bold text-center"
+          drag
+          dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }}
+          dragElastic={0.4}
+          dragTransition={{ bounceStiffness: 400, bounceDamping: 9 }}
+          className="bungee text-6xl text-sky-800 font-bold text-center"
         >
           Select a Render to View
         </motion.h1>
-        <p className="text-center  lg:hidden">
+        <p className="text-center text-sky-600 mt-4 lg:mt-0 lg:hidden">
           (This page looks coolest on larger screens)
         </p>
 
@@ -23,7 +27,7 @@ const RenderSelect = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 mx-16">
           <Link
             to="/renders/logo"
-            className="text-center  border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-blue-900 hover:text-white transition-all duration-200"
+            className="text-center  border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-blue-900 hover:text-white transition-all duration-200 rounded-sm"
           >
             React Logo
             <p className="text-sm ">
@@ -34,7 +38,7 @@ const RenderSelect = () => {
 
           <Link
             to="/renders/3dtext"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-green-600 hover:text-white transition-all duration-200"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-green-600 hover:text-white transition-all duration-200 rounded-sm"
           >
             3D Text
             <p className="text-sm">My name floating in an HDR image</p>
@@ -43,7 +47,7 @@ const RenderSelect = () => {
 
           <Link
             to="/renders/sound"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-rose-400 hover:text-white transition-all duration-200"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-rose-400 hover:text-white transition-all duration-200 rounded-sm"
           >
             Boombox (ft. My Music)
             <p className="text-sm">Positional audio and 3D buttons</p>
@@ -52,7 +56,7 @@ const RenderSelect = () => {
 
           <Link
             to="/renders/gallery"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-orange-600 hover:text-white transition-all duration-200"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-orange-600 hover:text-white transition-all duration-200 rounded-sm"
           >
             Temporal Art Gallery
             <p className="text-sm">Experimental State [STAY BACK]</p>
@@ -61,7 +65,7 @@ const RenderSelect = () => {
 
           <Link
             to="/renders/backgroundone"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-purple-500 hover:text-white transition-all duration-200"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-purple-500 hover:text-white transition-all duration-200 rounded-sm"
           >
             Background One
             <p className="text-sm">The background of this page!</p>
@@ -72,7 +76,7 @@ const RenderSelect = () => {
 
           <Link
             to="/renders/comingsoon"
-            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-red-700 hover:text-white transition-all duration-200"
+            className="text-center border-slate-800 border-2 py-5 gap-3 text-3xl font-bold hover:bg-red-700 hover:text-white transition-all duration-200 rounded-sm"
           >
             Coming Soon
             <p className="text-sm">For when there is more to be done</p>

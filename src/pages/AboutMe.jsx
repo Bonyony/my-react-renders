@@ -5,10 +5,9 @@ const AboutMe = () => {
   return (
     <>
       <div className="m-4 p-4 flex flex-col md:flex-row">
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center ">
           <h1 className="flex font-bold text-left text-5xl md:text-7xl">
-            About Me, <br />
-            Frank Francione
+            About Me
           </h1>
 
           <p className="flex flex-row mt-4 font-bold text-xl md:text-3xl">
