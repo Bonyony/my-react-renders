@@ -11,7 +11,7 @@ const RenderSelect = () => {
           initial={{ x: "-200%" }}
           animate={{ x: "0%" }}
           transition={{ type: "spring", stiffness: 70 }}
-          className="text-6xl font-bold text-center"
+          className="bungee text-6xl font-bold text-center"
         >
           Select a Render to View
         </motion.h1>
