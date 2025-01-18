@@ -8,14 +8,11 @@ const RenderSelect = () => {
     <>
       <div className="my-4 p-4 lg:absolute z-10 w-full">
         <motion.h1
-          initial={{ x: "-200%" }}
-          animate={{ x: "0%" }}
-          transition={{ type: "spring", stiffness: 70 }}
           drag
           dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }}
           dragElastic={0.4}
           dragTransition={{ bounceStiffness: 400, bounceDamping: 9 }}
-          className="bungee text-6xl text-sky-800 font-bold text-center"
+          className="italic text-5xl font-bold text-center cursor-grab"
         >
           Select a Render to View
         </motion.h1>
